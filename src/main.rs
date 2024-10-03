@@ -5,6 +5,7 @@ use crate::commands::CliContext;
 
 mod commands;
 mod errors;
+mod ical;
 mod profile;
 
 fn main() {
