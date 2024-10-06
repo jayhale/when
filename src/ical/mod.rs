@@ -1,11 +1,14 @@
-use winnow::{BStr, Located};
+use winnow::Located;
 
 mod ical_object;
 #[cfg(test)]
 mod tests;
 
-pub type Input<'b> = Located<&'b BStr>;
+pub type Input<'i> = Located<&'i str>;
 
 pub fn new_input(input: &str) -> Input {
-    Located::new(BStr::new(input))
+    Located::new(input)
 }
+
+pub use ical_object::ICalObject;
+pub struct ICalComponent {}
